@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+    <title>
+        {% if title %}
+            {{ title }}
+        {% else %}
+            Blog - main
+        {% endif %}
+    </title>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="heading-secondary">
+            {% if user %}
+                <a href="/user" class="heading-secondary__link">AnimeeKawaii</a>
+            {% else %}
+                <a href="/" class="heading-secondary__link">AnimeeKawaii</a>
+            {% endif %}
+        </h1>
+        
+        <div class="links">
+            {% if user %}
+                <a href="/user" class="link_item">What's new</a>
+                <a href="/anime_list" class="link_item">Anime List</a>
+                <a href="/popular" class="link_item">Popular</a>
+                <a href="/mylist" class="link_item">My list</a>
+                <a href="/logout" class="link_item">Logout</a>
+            {% else %}
+                <a href="/login" class="link_item">Login</a>
+                <a href="/register" class="link_item">Register</a>
+            {% endif %}
+
+        </div>
+    </header>
+    
+    <main class="main">
+        {% block main %}
+        {% endblock main %}
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+.header
+{
+    padding: 3rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .header 
+    {
+        padding: 3rem 3rem;
+    }
+}
+
+.main
+{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}

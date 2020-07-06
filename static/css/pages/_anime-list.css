@@ -1,0 +1,13 @@
+.anime__list-link:link,
+.anime__list-link:visited
+{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: orange;
+
+}
+
+.anime__list-link:hover
+{
+    border-bottom:1px solid orange ;
+}

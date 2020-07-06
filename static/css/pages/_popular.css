@@ -1,0 +1,26 @@
+.popular
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.popular__box
+{
+    margin: 4rem 4rem
+
+}
+
+.popular__box-link
+{
+    text-decoration: none;
+}
+
+
+.popular__box-img
+{
+    height: 30rem;
+}
+

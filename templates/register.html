@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+{% if error %}
+<h3 class="error">{{ error }}</h3>
+{% endif %}
+
+    <form action="/register" class="form" method="post">
+        <h3 class="heading-tertiary">Register here</h3>
+        <div class="form_box">
+            <p class="form_text">Name:</p>
+            <input type="text" name="name" class="form_field" placeholder="Name">
+        </div>
+
+        <div class="form_box">
+            <p class="form_text">Email:</p>
+            <input type="text" name="email" class="form_field" placeholder="Email">
+        </div>
+
+        <div class="form_box">
+            <p class="form_text">Password:</p>
+            <input type="password" name="password" class="form_field" placeholder="Password">
+        </div>
+
+        <div class="form_box">
+            <p class="form_text">Confirm Password:</p>
+            <input type="password" name="confirmation" class="form_field" placeholder="Confirm Password">
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+{% endblock main %}

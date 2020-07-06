@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+    {% if error %}
+    <h3 class="error">{{ error }}</h3>
+    {% endif %}
+
+    <div class="main__container">
+        
+        {% for i in anime_name %}
+
+            <p><a class="anime__list-link" href="https://gogoanime.pro/">{{i[1]}}</a></p>
+
+        {% endfor %}
+
+
+    </div>
+
+{% endblock main %}

@@ -1,0 +1,74 @@
+.form
+{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3rem 10rem;
+    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.form_box
+{
+    font-size: 1.8rem;
+}
+
+.form_box:not(:last-child)
+{
+    margin-bottom: 2.5rem;
+}
+
+.form_text
+{
+    text-align: left;
+}
+
+.form_field
+{
+    display: block;
+    padding: 1rem 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    width: 40rem;
+}
+
+.form_field::placeholder
+{
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
+.form_field:focus
+{
+    border: 1px solid #78909c;
+}
+
+.error
+{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: red;
+    border-bottom: 2px solid red;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .form
+    {
+        padding: 3rem 5rem;
+    }
+
+    .form_box
+    {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .form_field
+    {
+        width: 100%;
+    }
+}

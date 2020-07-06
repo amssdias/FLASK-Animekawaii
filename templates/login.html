@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+{% if error %}
+<h3 class="error">{{ error }}</h3>
+{% endif %}
+
+    <form action="/login" class="form" method="POST">
+        <h3 class="heading-tertiary">Login</h3>
+
+        <div class="form_box">
+            <p class="form_text">Email:</p>
+            <input type="text" name="email" class="form_field" placeholder="Email">
+        </div>
+
+        <div class="form_box">
+            <p class="form_text">Password:</p>
+            <input type="password" name="password" class="form_field" placeholder="Password">
+        </div>
+
+
+        <button type="submit" class="btn">Login</button>
+    </form>
+
+{% endblock main %}

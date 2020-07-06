@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* = 10px = 1rem */
+}
+
+
+@media only screen and (max-width: 1000px) {
+  html 
+  {
+    font-size: 55%;
+  }
+}
+
+body 
+{
+  box-sizing: border-box;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url(../../images/cover.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}

@@ -1,0 +1,55 @@
+{% extends "main.html" %}
+
+{% block main %}
+
+    {% if error %}
+    <h3 class="error">{{ error }}</h3>
+    {% endif %}
+
+    <div class="main__container">
+        <form action="/mylist" method="POST" class="user__list">
+
+            <!-- Box for the ones the user have seen-->
+            <div class="wraper">
+                <div class="wrapper__form margin-bottom-small">
+                    <h3 class="heading-tertiary">Seen ones:</h3>
+                    <input name="seen" type="text" class="user__list-add margin-bottom-small" placeholder="Seen">
+                    <button name="btn_seen" value="add_seen" type="submit" class="btn btn-small margin-bottom-small">Add</button>
+                    <button name="btn_seen_delete" value="delete_seen" type="submit" class="btn btn-small margin-bottom-small">Delete</button>
+                </div>
+
+
+                {% if list_seen %}
+                    <ul class="wrapper__list">
+                        {% for i in list_seen %}
+                            <li class="wrapper__list__item">{{ i[0] }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+
+            <!-- Box for the ones the user wants to see-->
+            <div class="wraper">
+                <div class="wrapper__form margin-bottom-small">
+                    <h3 class="heading-tertiary">To watch:</h3>
+                    <input name="watch" type="text" class="user__list-add margin-bottom-small" placeholder="To watch">
+                    <button name="btn_watch" value="add_watch" type="submit" class="btn btn-small margin-bottom-small">Add</button>
+                    <button name="btn_watch_delete" value="delete_watch" type="submit" class="btn btn-small margin-bottom-small">Delete</button>
+                </div>
+                
+                {% if list_watch %}
+                    <ul class="wrapper__list">
+                        {% for i in list_watch %}
+                        <li class="wrapper__list__item"  >{{ i[0] }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+       
+        </form>
+
+
+    </div>
+
+{% endblock main %}

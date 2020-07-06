@@ -1,0 +1,44 @@
+.btn,
+.btn:active
+{
+    padding: .7rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    transition: .3s;
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    
+}
+
+.btn:hover
+{
+    transform: translateY(-.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.btn:active
+{
+    transform: translateY(-.2rem);
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.4);
+}
+
+.btn-small
+{
+    width: 20%;
+    text-align: center;
+}
+
+.btn-small:not(:last-child)
+{
+    margin-right: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+    .btn-small
+    {
+        width: 30%;
+    }
+}

@@ -1,0 +1,98 @@
+.heading-secondary
+{
+    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+
+.heading-secondary__link:link,
+.heading-secondary__link:visited
+{
+    display: inline-block;
+    text-decoration: none;
+    transition: .3s;
+
+    color:orange;
+
+}
+
+.heading-secondary__link:hover
+{
+    transform: translateZ(2rem) scale(1.3);
+}
+
+.heading-tertiary
+{
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.link_item:link,
+.link_item:visited
+{
+    font-size: 1.8rem;
+    padding: 2rem;
+    text-decoration: none;
+    transition: .3s;
+    color: orange;
+}
+
+.link_item:hover
+{
+    color: red;
+}
+
+
+.post-link:link,
+.post-link:visited
+{
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    background-color: white;
+    border-radius: 5rem;
+    color:#0984e3;
+    transition: .3s;
+}
+
+.post-link:hover
+{
+    transform: translateY(-.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.post-link:active
+{
+    transform: translateY(-.2rem);
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.4);
+}
+
+.posts_title
+{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .heading-secondary
+    {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    
+    .links 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .link_item:link,
+    .link_item:visited
+    {
+        padding: 0.5rem 1rem;
+        font-size: 1.6rem;
+    }
+}
